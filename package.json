@@ -1,6 +1,6 @@
 {
   "name": "echolearn",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Real-time captions for deaf students on EAD platforms",
   "private": true,
   "engines": {
@@ -22,10 +22,7 @@
     "release:major": "standard-version --release-as major",
     "test": "vitest run",
     "test:watch": "vitest",
-    "test:coverage": "vitest run --coverage",
-    "release": "standard-version",
-    "release:minor": "standard-version --release-as minor",
-    "release:major": "standard-version --release-as major"
+    "test:coverage": "vitest run --coverage"
   },
   "lint-staged": {
     "src/**/*.{ts,js}": [
