@@ -1,0 +1,15 @@
+/* Global reset scoped to EchoLearn's host element only.
+   This prevents the host page from inheriting styles into
+   the Shadow DOM boundary via the :host selector. */
+
+#echolearn-caption-overlay {
+    all: initial;
+    display: block;
+    position: fixed;
+    z-index: 2147483647;
+    pointer-events: none;
+}
+
+#echolearn-caption-overlay * {
+    box-sizing: border-box;
+}
