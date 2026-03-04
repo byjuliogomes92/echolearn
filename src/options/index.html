@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EchoLearn — Configurações</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./options.css" />
+</head>
+
+<body>
+    <div class="container">
+        <header class="header">
+            <img src="../icons/icon48.png" alt="EchoLearn" class="logo" />
+            <div class="header-text">
+                <h1 class="title">Configurações</h1>
+                <span class="subtitle">EchoLearn</span>
+            </div>
+        </header>
+
+        <main class="main">
+
+            <section class="section">
+                <h2 class="section-title">Transcrição</h2>
+
+                <div class="field">
+                    <label class="label" for="provider">Provedor</label>
+                    <select class="select" id="provider">
+                        <option value="webSpeech">Web Speech API (gratuito)</option>
+                        <option value="deepgram">Deepgram (maior precisão)</option>
+                    </select>
+                </div>
+
+                <div class="field" id="deepgram-key-field" style="display:none">
+                    <label class="label" for="deepgram-key">Chave API Deepgram</label>
+                    <input class="input" type="password" id="deepgram-key" placeholder="dg_xxxxxxxxxxxxxxxx"
+                        autocomplete="off" />
+                </div>
+
+                <div class="field">
+                    <label class="label" for="language">Idioma</label>
+                    <select class="select" id="language">
+                        <option value="pt-BR">Português (Brasil)</option>
+                        <option value="pt-PT">Português (Portugal)</option>
+                        <option value="en-US">English (US)</option>
+                        <option value="es-ES">Español</option>
+                    </select>
+                </div>
+            </section>
+
+            <section class="section">
+                <h2 class="section-title">Aparência</h2>
+
+                <div class="field">
+                    <label class="label" for="font-size">
+                        Tamanho da fonte
+                        <span class="value-badge" id="font-size-value">16px</span>
+                    </label>
+                    <input class="range" type="range" id="font-size" min="10" max="48" step="2" value="16" />
+                </div>
+
+                <div class="field">
+                    <label class="label" for="opacity">
+                        Opacidade do painel
+                        <span class="value-badge" id="opacity-value">90%</span>
+                    </label>
+                    <input class="range" type="range" id="opacity" min="10" max="100" step="5" value="90" />
+                </div>
+
+                <div class="field">
+                    <label class="label" for="position">Posição inicial</label>
+                    <select class="select" id="position">
+                        <option value="bottom">Inferior</option>
+                        <option value="middle">Centro</option>
+                        <option value="top">Superior</option>
+                    </select>
+                </div>
+            </section>
+
+        </main>
+
+        <footer class="footer">
+            <button class="btn-secondary" id="reset-btn">Restaurar padrões</button>
+            <button class="btn-primary" id="save-btn">Salvar</button>
+        </footer>
+
+        <div class="toast" id="toast"></div>
+    </div>
+
+    <script type="module" src="./index.ts"></script>
+</body>
+
+</html>
