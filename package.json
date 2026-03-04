@@ -16,20 +16,33 @@
     "lint": "eslint src --ext .ts,.js --max-warnings 0",
     "lint:fix": "eslint src --ext .ts,.js --fix",
     "format": "prettier --write \"src/**/*.{ts,js,html,css}\"",
-    "format:check": "prettier --check \"src/**/*.{ts,js,html,css}\""
+    "format:check": "prettier --check \"src/**/*.{ts,js,html,css}\"",
+    "release": "standard-version",
+    "release:minor": "standard-version --release-as minor",
+    "release:major": "standard-version --release-as major"
+  },
+  "lint-staged": {
+    "src/**/*.{ts,js}": [
+      "eslint --fix --max-warnings 0",
+      "prettier --write"
+    ],
+    "src/**/*.{html,css,json}": [
+      "prettier --write"
+    ]
   },
   "devDependencies": {
     "@types/chrome": "^0.1.37",
     "@types/node": "^25.3.3",
     "@typescript-eslint/eslint-plugin": "^8.56.1",
     "@typescript-eslint/parser": "^8.56.1",
-    "eslint": "^9.39.3",
+    "eslint": "^8.57.1",
     "eslint-config-prettier": "^10.1.8",
     "eslint-plugin-import": "^2.32.0",
     "eslint-plugin-unicorn": "^63.0.0",
     "husky": "^8.0.3",
     "lint-staged": "^16.3.2",
     "prettier": "^3.8.1",
+    "standard-version": "^9.5.0",
     "typescript": "^5.9.3",
     "vite": "^7.3.1"
   }
