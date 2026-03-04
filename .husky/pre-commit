@@ -1,4 +1,6 @@
 #!/usr/bin/env sh
 . "$(dirname -- "$0")/_/husky.sh"
 
-npx lint-staged
+REPO_ROOT="$(git rev-parse --show-toplevel)"
+cd "$REPO_ROOT"
+NODE_PATH="$REPO_ROOT/node_modules" "$REPO_ROOT/node_modules/.bin/eslint.cmd" src --ext .ts,.js --max-warnings 0
