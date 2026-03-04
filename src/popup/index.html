@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EchoLearn</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./popup.css" />
+</head>
+
+<body>
+    <div class="container">
+        <header class="header">
+            <img src="../icons/icon48.png" alt="EchoLearn" class="logo" />
+            <span class="brand">EchoLearn</span>
+        </header>
+
+        <main class="main">
+            <div class="status-card" id="status-card">
+                <div class="status-indicator" id="status-indicator"></div>
+                <span class="status-text" id="status-text">Inativo</span>
+            </div>
+
+            <button class="toggle-btn" id="toggle-btn" disabled>
+                <span class="toggle-label" id="toggle-label">Ativar Legendas</span>
+            </button>
+
+            <p class="hint" id="hint">Abra uma aula para ativar</p>
+        </main>
+
+        <footer class="footer">
+            <a href="#" id="options-link" class="options-link">Configurações</a>
+        </footer>
+    </div>
+
+    <script type="module" src="./index.ts"></script>
+</body>
+
+</html>
